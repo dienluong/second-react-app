@@ -6,15 +6,23 @@ import AddFile from './AddFile';
 import { fetchFiles } from "./utils/filesApi";
 // import { fetchFilesXHR } from "./utils/filesApi";
 
+import Home from './Home';
+import About from './About';
+import Nav from './Nav';
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       dataLocation: 'files-data.json',
-      files: []
+      files: [],
+      view: <Home />
     };
     // bind this so that it can be called as 'this.addFile' from the onClick in <button>
     this.addFile = this.addFile.bind(this);
+
+    this.goHome = this.goHome.bind(this);
+    this.goAbout = this.goAbout.bind(this);
   }
 
   componentDidMount() {
@@ -38,10 +46,21 @@ class App extends Component {
       });
   }
 
-
   addFile(file) {
     this.setState({
       files: this.state.files.concat([file])
+    });
+  }
+
+  goHome() {
+    this.setState({
+      view: <Home />
+    });
+  }
+
+  goAbout() {
+    this.setState({
+      view: <About />
     });
   }
 
@@ -54,6 +73,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
+        <Nav goHome={this.goHome} goAbout={this.goAbout} currentView={this.state.view}/>
+        {this.state.view}
         <AddFile addFile={this.addFile} />
         <p className="App-intro">
           To get started, edit the following files and save to reload the site:
