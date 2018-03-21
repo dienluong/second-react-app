@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import File from './File';
-import AddFile from './AddFile';
-import { fetchFiles } from "./utils/filesApi";
+import File from '../components/File';
+import AddFile from '../components/AddFile';
+import { fetchFiles } from "../utils/filesApi";
 // import { fetchFilesXHR } from "./utils/filesApi";
 
 import Home from './Home';
 import About from './About';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 
 class App extends Component {
   constructor(props) {

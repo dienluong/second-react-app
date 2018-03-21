@@ -1,6 +1,6 @@
 import React from 'react';
-import Home from './Home';
-import About from './About';
+import Home from '../pages/Home';
+import About from '../pages/About';
 
 export default class Nav extends React.Component {
   constructor(props) {
