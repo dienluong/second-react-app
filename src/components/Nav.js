@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
 
@@ -27,6 +28,7 @@ export default class Nav extends React.Component {
       <div>
         <button onClick={this.clickHome}>Home</button>
         <button onClick={this.clickAbout}>About Us</button>
+        <br/><Link to='/home'>Home</Link> <Link to='/about'>About</Link>
       </div>
     );
 
