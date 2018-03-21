@@ -26,9 +26,9 @@ export default class Nav extends React.Component {
   render() {
     return (
       <div>
+        <Link to='/home'>Home</Link> <Link to='/about'>About</Link> <Link to='/'>File Page</Link><br/>
         <button onClick={this.clickHome}>Home</button>
         <button onClick={this.clickAbout}>About Us</button>
-        <br/><Link to='/home'>Home</Link> <Link to='/about'>About</Link>
       </div>
     );
 
