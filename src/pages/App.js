@@ -4,10 +4,12 @@ import './App.css';
 
 import FilePage from './FilePage';
 
-import {BrowserRouter as Router, Route, hashHistory} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 import Nav from '../components/Nav';
+
+import FluxCounter from '../components/FluxCounter';
 
 class App extends Component {
   constructor(props) {
@@ -50,6 +52,7 @@ class App extends Component {
             <Route exact path='/' component={FilePage} />
             <Route path='/home' component={Home} />
             <Route path='/about' component={About} />
+            <Route path='/flux' component={FluxCounter} />
           </div>
         </Router>
       </div>
