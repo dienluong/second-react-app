@@ -26,9 +26,12 @@ export default class Nav extends React.Component {
   render() {
     return (
       <div>
-        <Link to='/home'>Home</Link> <Link to='/about'>About</Link> <Link to='/'>File Page</Link> <Link to='/flux'>Flux Counter</Link><br/>
-        <button onClick={this.clickHome}>Home</button>
-        <button onClick={this.clickAbout}>About Us</button>
+        <Link to='/home'>Home</Link> <Link to='/about'>About</Link> <Link to='/'>File Page</Link> <Link to='/flux'>Flux Counter</Link> <Link to='/redux'>Redux Counter</Link><br/>
+        <div style={{backgroundColor: 'grey'}}>
+          <span>Not using React Router:</span>
+          <button onClick={this.clickHome}>Home</button>
+          <button onClick={this.clickAbout}>About Us</button>
+        </div>
       </div>
     );
 

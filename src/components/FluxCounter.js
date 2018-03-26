@@ -37,6 +37,7 @@ export default class FluxCounter extends React.Component {
   render() {
     return (
       <div>
+        <h3>Flux Counter</h3>
         <p>{this.state.count}</p>
         <button onClick={this.increment}>Increment</button>
       </div>

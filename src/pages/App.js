@@ -10,6 +10,7 @@ import About from './About';
 import Nav from '../components/Nav';
 
 import FluxCounter from '../components/FluxCounter';
+import ReduxCounter from '../components/ReduxCounter';
 
 class App extends Component {
   constructor(props) {
@@ -53,6 +54,7 @@ class App extends Component {
             <Route path='/home' component={Home} />
             <Route path='/about' component={About} />
             <Route path='/flux' component={FluxCounter} />
+            <Route path='/redux' component={ReduxCounter} />
           </div>
         </Router>
       </div>
