@@ -26,14 +26,6 @@ function removeChangeListener(cb) {
   this.removeListener('COUNT_CHANGED', cb)
 }
 
-/* Using Object.assign() */
-// let countStore = Object.assign({
-//   getCount: getCount,
-//   emitChange: emitChange,
-//   addChangeListener: addChangeListener,
-//   removeChangeListener: removeChangeListener
-// }, EventEmitter.prototype);
-
 /* Alternatively, use Object.create() */
 let countStore = Object.create(new EventEmitter());
 countStore.getCount = getCount;
